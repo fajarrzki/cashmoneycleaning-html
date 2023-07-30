@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,200;1,500;1,600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins','serif';
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --main-color : #FFFF00;
+    --secondary : #F1F1F0;
+    --font : #C8C8C8;
+    --logo : #6026FF;
+    --background : #1E1D1D;
+
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background:  rgb(103, 103, 103) 9%;
+    min-height: 2000px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--main-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo{
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--logo);
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.navbar .navbar-nav a{
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1.3rem;
+    color: var(--logo);
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover{
+    color: #F1F1F0;
+}
+
+#menu-harga{
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: white;
+    padding: 8px 14px;
+    margin: 0 1.4rem;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+#menu-harga:hover{
+    background-color: var(--secondary)
+}
+
+#hamburger{
+    display: none;
+    vertical-align: middle;
+    color: var(--logo);
+}
+
+/*hero section */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../imgs/backgroundmain.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgb(103, 103, 103) 9%, rgba(255, 255, 0, 0)50%);
+}
+
+.hero .content {
+    padding: 1.4rem 5%;
+    max-width: 50rem;
+}
+
+.hero .content h1{
+    font-size: 40px;
+    text-shadow: 1px 1px 3px rgba(167, 167, 167, 0.5);
+    line-height: 45px;
+    font-weight: 600;
+}
+
+.hero .content h1 span{
+    color: var(--logo);
+}
+
+.hero .content p{
+    font-size: 1.2rem;
+    margin-top: 3px;
+    line-height: 20px;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(167, 167, 167, 0.5);
+}
+
+.hero .content .cta{
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/*tentang start*/
+
+.tentang{
+    padding: 6.5rem 7% 1.4rem;
+}
+
+.tentang h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.6rem;
+}
+
+.tentang .row{
+    display: flex;
+}
+
+.tentang .row .about-img{
+    padding: 30px;
+    padding-right: 100px;
+}
+
+.tentang .row .about-img img{
+    width: 100%;
+}
+
+.tentang .row .content-row{
+    flex: 1 1 25rem;
+    padding: 0 1rem;
+}
+
+.tentang .row .content-row h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.tentang .row .content-row p{
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 100;
+}
+/* tentang end*/  
+
+/*service start*/
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #ffff21;
+}
+.card {
+    cursor: pointer;
+    width: 300px;
+    height: 450px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(238, 255, 0);
+    transition: all .2s;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+   }
+   
+.card:hover {
+box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+}
+
+.card-container h2{
+    text-align: center;
+}
+
+.card-container .card .card-img{
+    padding: 20px 30px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.card-content{
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3{
+    margin: 0;
+}
+
+.card-content .button{
+    display: inline-block;
+    background-color: #6026FF;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #8053fb;
+}
+
+/*service end*/
+
+/*footer start*/
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    height: 40vh;
+  }
+  
+  .footer-contact {
+    margin-top: 20px;
+  }
+  
+  .footer-contact h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+
+/*footer end*/
+   
+   
+   
+   
+   
+  
+
+
+
+
+/* media queries */
+
+/* laptop */
+@media (max-width:1366px){
+    html{
+        font-size: 85%;
+    }
+}
+
+/* tablet */
+@media (max-width:768px){
+    html{
+        font-size: 62.5%;
+    }
+
+    #hamburger{
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--secondary);
+        width: 30rem;
+        height: 50vh;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }     
+
+    .navbar .navbar-nav a{
+        display: block;
+        color: var(--background);
+        margin: 1.5rem;
+        font-size: 1.7rem;
+        padding: 0.5rem;
+    }
+}
+
+/* mobile phone */
+@media (max-width:450px){
+    html{
+        font-size: 55%;
+    }
+}
